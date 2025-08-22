@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>36e0d769-ea7b-435d-a26b-e065d9a87914</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+  
+    <!-- The official Model Context Protocol SDK exposes the base classes and
+         attributes used to register tools with an MCP server. This package
+         includes the core types for interacting with hosts. -->
+    <PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.4" />
+
+    <!-- Provides an ASP.NET Core integration layer for hosting an MCP server
+         over HTTP. This package adds extension methods to register the MCP
+         middleware and supports the streamable HTTP transport defined by the
+         MCP specification. -->
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.3.0-preview.4" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,300 @@
+{
+  "info": {
+    "name": "ΣUM MCP — SumMatrixTools",
+    "_postman_id": "b4e0f6b7-7d2c-4e6a-9a01-3b8a3af2d001",
+    "description": "Postman collection to exercise SumMatrixTools via JSON-RPC.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "id_counter",
+      "value": "1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://sum.mcn.net"
+    },
+    {
+      "key": "apiKey",
+      "value": "change-me"
+    }
+  ],
+  "item": [
+    {
+      "name": "tools/list",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/list\",\n  \"params\": {}\n}"
+        },
+        "description": "List available tools."
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.hello",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.hello\",\n    \"arguments\": {\n      \"name\": \"Developer\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.hello"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.echo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.echo\",\n    \"arguments\": {\n      \"name\": \"sum.echo\",\n      \"text\": \"Hello from Postman!\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.echo"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.time.now",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.time.now\",\n    \"arguments\": {\n      \"name\": \"sum.time.now\",\n      \"timezone\": \"Asia/Jerusalem\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.time.now"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.time.parse",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.time.parse\",\n    \"arguments\": {\n      \"name\": \"sum.time.parse\",\n      \"input\": \"2025-01-02T03:04:05Z\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.time.parse"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.uuid.new",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.uuid.new\",\n    \"arguments\": {\n      \"name\": \"sum.uuid.new\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.uuid.new"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.math.add",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.math.add\",\n    \"arguments\": {\n      \"name\": \"sum.math.add\",\n      \"a\": 3,\n      \"b\": 2\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.math.add"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.math.sum",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.math.sum\",\n    \"arguments\": {\n      \"name\": \"sum.math.sum\",\n      \"values\": [\n        1,\n        2,\n        3,\n        4\n      ]\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.math.sum"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.math.avg",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.math.avg\",\n    \"arguments\": {\n      \"name\": \"sum.math.avg\",\n      \"values\": [\n        2,\n        4,\n        6,\n        8\n      ]\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.math.avg"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.text.slugify",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.text.slugify\",\n    \"arguments\": {\n      \"name\": \"sum.text.slugify\",\n      \"text\": \"Hello, World!\",\n      \"separator\": \"-\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.text.slugify"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.text.extract_emails",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.text.extract_emails\",\n    \"arguments\": {\n      \"name\": \"sum.text.extract_emails\",\n      \"text\": \"one@test.com; two@sum-matrix.com\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.text.extract_emails"
+      },
+      "response": []
+    },
+    {
+      "name": "tools/call — sum.json.validate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Api-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/mcp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"sum.json.validate\",\n    \"arguments\": {\n      \"name\": \"sum.json.validate\",\n      \"json\": \"{\\\"a\\\":1,\\\"b\\\":true}\"\n    }\n  }\n}"
+        },
+        "description": "Invoke sum.json.validate"
+      },
+      "response": []
+    }
+  ]
+}
