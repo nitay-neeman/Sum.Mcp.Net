@@ -10,7 +10,7 @@ This repo demonstrates how to expose **generic developer tools** via MCP using `
 
 ---
 
-## ?? Tools (SumMatrixTools)
+## Tools (SumMatrixTools)
 
 - `sum.hello` — Returns `"Hello Sum Matrix!"` (optionally greets by name)
 - `sum.echo` — Echo back text
